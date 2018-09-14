@@ -1,5 +1,5 @@
 # EquivariantNetworks
-Code Accompanying Equivariant Paper:  https://www.biorxiv.org/content/early/2018/06/20/351254
+Code Accompanying Paper:  https://www.biorxiv.org/content/early/2018/06/20/351254
 
 
 

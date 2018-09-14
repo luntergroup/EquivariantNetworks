@@ -1,5 +1,5 @@
 {
-  "input_filters":8,
+  "input_filters":16,
   "filter_length":30,
   "activation": "elu",
   "reg":0.0,

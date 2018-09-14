@@ -3,8 +3,8 @@ Code Accompanying Equivariant Paper:  https://www.biorxiv.org/content/early/2018
 
 
 
-Salient files
-————————————---
+# Salient files
+
 
 
 

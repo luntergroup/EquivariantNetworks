@@ -1,0 +1,119 @@
+backend: tensorflow
+class_name: Sequential
+config:
+- class_name: Conv1D
+  config:
+    activation: elu
+    activity_regularizer: null
+    batch_input_shape: !!python/tuple [null, 997, 4]
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    data_format: channels_last
+    dilation_rate: !!python/tuple [1]
+    dtype: float32
+    filters: 16
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer:
+      class_name: L1L2
+      config: {l1: 0.0, l2: 0.0}
+    kernel_size: !!python/tuple [30]
+    name: conv1d_1
+    padding: valid
+    strides: !!python/tuple [1]
+    trainable: true
+    use_bias: true
+- class_name: MCRCDropout
+  config: {name: mcrc_dropout_1, noise_shape: null, rate: 0.1, seed: null, trainable: true}
+- class_name: MaxPooling1D
+  config:
+    name: max_pooling1d_1
+    padding: valid
+    pool_size: !!python/tuple [8]
+    strides: !!python/tuple [8]
+    trainable: true
+- class_name: Conv1D
+  config:
+    activation: elu
+    activity_regularizer: null
+    bias_constraint: null
+    bias_initializer:
+      class_name: Zeros
+      config: {}
+    bias_regularizer: null
+    data_format: channels_last
+    dilation_rate: !!python/tuple [1]
+    filters: 16
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: VarianceScaling
+      config: {distribution: uniform, mode: fan_avg, scale: 1.0, seed: null}
+    kernel_regularizer:
+      class_name: L1L2
+      config: {l1: 0.0, l2: 0.0}
+    kernel_size: !!python/tuple [4]
+    name: conv1d_2
+    padding: valid
+    strides: !!python/tuple [1]
+    trainable: true
+    use_bias: true
+- class_name: MCRCDropout
+  config: {name: mcrc_dropout_2, noise_shape: null, rate: 0.1, seed: null, trainable: true}
+- class_name: CustomSumPool
+  config: {name: custom_sum_pool_1, trainable: true}
+- class_name: GlobalMaxPooling1D
+  config: {name: global_max_pooling1d_1, trainable: true}
+- class_name: Dense
+  config:
+    activation: softmax
+    activity_regularizer: null
+    bias_constraint: null
+    bias_initializer:
+      class_name: Constant
+      config:
+        value: !!python/object/apply:numpy.core.multiarray._reconstruct
+          args:
+          - &id001 !!python/name:numpy.ndarray ''
+          - !!python/tuple [0]
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple [2]
+          - &id002 !!python/object/apply:numpy.dtype
+            args: [i8, 0, 1]
+            state: !!python/tuple [3, <, null, null, null, -1, -1, 0]
+          - false
+          - !!binary |
+            AQAAAAAAAAD//////////w==
+    bias_regularizer: null
+    kernel_constraint: null
+    kernel_initializer:
+      class_name: Constant
+      config:
+        value: !!python/object/apply:numpy.core.multiarray._reconstruct
+          args:
+          - *id001
+          - !!python/tuple [0]
+          - !!binary |
+            Yg==
+          state: !!python/tuple
+          - 1
+          - !!python/tuple [2, 8]
+          - *id002
+          - false
+          - !!binary |
+            AQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAAB
+            AAAAAAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEA
+            AAAAAAAAAQAAAAAAAAA=
+    kernel_regularizer: null
+    name: dense_1
+    trainable: true
+    units: 2
+    use_bias: true
+keras_version: 2.2.2

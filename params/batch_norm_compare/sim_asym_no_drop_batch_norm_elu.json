@@ -1,0 +1,12 @@
+{
+  "input_filters":12,
+  "filter_length":14,
+  "activation": "elu",
+  "reg":0,
+  "batch_norm":1,
+  "use_dropout":0,
+  "mc_dropout":1,
+  "custom_init":0,
+  "apply_rc":0,
+  "output_prefix":"results/batch_norm_comp/sim_asym_no_drop_batch_norm_elu"
+}

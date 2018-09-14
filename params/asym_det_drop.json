@@ -1,0 +1,11 @@
+{
+  "input_filters":16,
+  "filter_length":30,
+  "activation": "elu",
+  "reg":0.0003,
+  "use_dropout":1,
+  "mc_dropout":0,
+  "custom_init":1,
+  "apply_rc":0,
+  "output_prefix":"results/asym_det_dropout"
+}

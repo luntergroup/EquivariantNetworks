@@ -1,0 +1,12 @@
+{
+  "input_filters":16,
+  "filter_length":30,
+  "activation": "relu",
+  "reg":0.0003,
+  "use_dropout":0,
+  "mc_dropout":1,
+  "custom_init":0,
+  "batch_norm":0,
+  "apply_rc":0,
+  "output_prefix":"results/batch_norm_comp/asym_no_drop_default"
+}

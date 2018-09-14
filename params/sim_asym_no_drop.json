@@ -1,0 +1,11 @@
+{
+  "input_filters":12,
+  "filter_length":14,
+  "activation": "elu",
+  "reg":0,
+  "use_dropout":0,
+  "mc_dropout":1,
+  "custom_init":1,
+  "apply_rc":0,
+  "output_prefix":"results/sim_asym_no_drop"
+}

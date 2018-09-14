@@ -1,0 +1,12 @@
+{
+  "input_filters":16,
+  "filter_length":30,
+  "activation": "elu",
+  "reg":0.0003,
+  "use_dropout":0,
+  "mc_dropout":1,
+  "custom_init":1,
+  "apply_rc":0,
+  "data_frac":0.25,
+  "output_prefix":"results/small_data/asym_no_drop_0.25_dat"
+}
